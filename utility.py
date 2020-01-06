@@ -35,9 +35,9 @@ def downloadBook(BookInfo,link):    #Function to download book given BookInfo li
     fileName = BookInfo[1]+".pdf"
     filename = wget.download(URL,out=fileName)
     
-def parseBookInfo(CSV):
+def parseBookInfo(CSV):     #Self Explanatory
     with open(CSV, 'r') as f:
         reader = csv.reader(f)
         bookList = list(reader)
-    #print(bookList)
+    #print(bookList) #Test of booklist structure
     return(bookList)
